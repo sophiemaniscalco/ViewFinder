@@ -48,7 +48,7 @@
         <!--Add New Photos!-->
         <scene sceneID="Xzt-pJ-SvH">
             <objects>
-                <viewController id="Ruc-dZ-loA" sceneMemberID="viewController">
+                <viewController id="Ruc-dZ-loA" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Gl-0T-gHF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,27 +68,42 @@
                                 <rect key="frame" x="20" y="420" width="169" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="Ruc-dZ-loA" eventType="touchUpInside" id="d6d-3f-NCB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeY-Fe-aav">
                                 <rect key="frame" x="207" y="571" width="169" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Album"/>
+                                <connections>
+                                    <action selector="viewAlbum:" destination="Ruc-dZ-loA" eventType="touchUpInside" id="vyW-GH-kVa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-Nt-VUb">
                                 <rect key="frame" x="30" y="571" width="169" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="Ruc-dZ-loA" eventType="touchUpInside" id="hwe-eH-cXJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFS-W8-lXR">
                                 <rect key="frame" x="207" y="420" width="169" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="Ruc-dZ-loA" eventType="touchUpInside" id="pPG-p0-zmQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YDV-IS-JFm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photos!" id="2UG-kL-AZL"/>
+                    <connections>
+                        <outlet property="photoSpace" destination="Otd-Qm-LHM" id="G08-ob-gG0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKH-ol-60a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
